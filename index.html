@@ -19,7 +19,6 @@
       transform-style: preserve-3d;
       position: relative;
       height: 300px;
-      cursor: pointer;
     }
 
     h1 {
@@ -72,17 +71,17 @@
       padding: 40px;
     }
 
-    .card:hover .front {
+    .rotate-front {
       transform: rotateY(-160deg);
       box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
     }
 
-    .card:hover .page {
+    .rotate-page {
       transform: rotateY(-159deg);
       box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
     }
 
-    .card:hover .back {
+    .rotate-back {
       transform: rotateY(-20deg);
       box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
     }
@@ -107,5 +106,12 @@
     </div>
   </div>
 </body>
-
+<script>
+  setTimeout(turnPage, 2000);
+  function turnPage() {
+    document.querySelector('.front').classList.add('rotate-front');
+    document.querySelector('.back').classList.add('rotate-back');
+    document.querySelector('.page').classList.add('rotate-page');
+  }
+</script>
 </html>
