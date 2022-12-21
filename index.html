@@ -13,19 +13,21 @@
       text-align: center;
       background-image: url('bg.jpg');
       background-size: cover;
+      color: #900909
     }
 
     .card {
       transform-style: preserve-3d;
       position: relative;
-      height: 300px;
+      height: 20em;
     }
 
     h1 {
       font-family: 'Cookie', serif;
-      font-size: 40px;
-      margin-top: 40px;
-      color: white;
+      font-size: 2em;
+      margin-top: 2em;
+      padding: 0.3em;
+      background-color: white;
     }
 
     h5 {
@@ -34,26 +36,21 @@
 
     h5,
     p {
-      font-size: 25px;
-      margin: 10px;
+      font-size: 1.7em;
+      margin: 0.5em;
     }
 
     img {
-      margin-top: 60px;
-      width: 90px;
+      margin-top: 2em;
+      width: 6em;
       /* make image appear right side forward */
       transform: scaleX(-1);
     }
 
     .page,
     .front {
-      background: url('winter_scene.jpg') no-repeat center darkred;
+      background: url('pokemon-winter.jpg') no-repeat center;
       background-size: cover;
-    }
-
-    .message {
-      margin-top: 15x;
-      color: #900909;
     }
 
     .front,
@@ -91,12 +88,10 @@
 <body>
   <div class="card">
     <div class="back">
-      <div class="message">
         <h5>Dear Friend,</h5>
-        <p>'Tis the season of giving and gratitude. Thank you for your continued support. We wish you and your family a
+        <p>'Tis the season of giving and gratitude. We wish you and your family a
           joyous and happy holiday season. </p>
-        <h5 class="cookie">Ms. Paulino</h5>
-      </div>
+        <h5>Ms. Paulino</h5>
     </div>
     <div class="page">
       <img src="wths-logo.png">
@@ -107,7 +102,8 @@
   </div>
 </body>
 <script>
-  setTimeout(turnPage, 2000);
+  /* turnPage after 2.5 seconds after the page has loaded */
+  setTimeout(turnPage, 2500);
   function turnPage() {
     document.querySelector('.front').classList.add('rotate-front');
     document.querySelector('.back').classList.add('rotate-back');
